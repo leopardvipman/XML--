@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,NSXMLParserDelegate>{
+    NSString *value;
+    int start;
+}
+
+
+@property(nonatomic,strong)UITableView *tabView;
+@property(nonatomic,strong)NSMutableArray *titleArr;
+@property(nonatomic,strong)NSMutableArray *contentArr;
 
 @end
